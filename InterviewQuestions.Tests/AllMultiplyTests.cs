@@ -48,14 +48,17 @@ namespace InterviewQuestions.Tests
         {
             var sw = new Stopwatch();
             sw.Start();
-            var firstResult = Functions.Multiply(2, int.MaxValue / 2);
+
+            var firstResult = Functions.Multiply(2, 100000000);
             sw.Stop();
             var firstTime = sw.ElapsedMilliseconds;
 
             sw.Restart();
-            var secondResult = Functions.Multiply(int.MaxValue / 2, 2);
+
+            var secondResult = Functions.Multiply(100000000, 2);
             sw.Stop();
             var secondTime = sw.ElapsedMilliseconds;
+
             var timeDifference = Math.Abs(firstTime - secondTime);
 
             firstResult.Should().Be(secondResult);
