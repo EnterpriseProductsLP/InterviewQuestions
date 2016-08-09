@@ -70,7 +70,7 @@ namespace InterviewQuestions.Tests
             var timeDifference = Math.Abs(firstTime - secondTime);
 
             firstResult.Should().Be(secondResult);
-            timeDifference.Should().BeLessThan(5);
+            timeDifference.Should().BeLessThan(10);
         }
     }
 }
