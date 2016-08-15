@@ -26,5 +26,13 @@ namespace InterviewQuestions.Tests
             var result = Functions.Multiply(2, 3);
             result.Should().Be(6);
         }
+
+        [Test]
+        public void MultiplyShouldReturnSixFromNegTwoNegTimesThree()
+        {
+            var result = Functions.Multiply(-2,-3);
+            result.Should().Be(6);
+
+        }
     }
 }
