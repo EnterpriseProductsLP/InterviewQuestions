@@ -44,6 +44,13 @@ namespace InterviewQuestions.Tests
         }
 
         [Test]
+        public void MultiplyShouldReturnFourFromNegativeTwoTimesNegativeTwo()
+        {
+            var result = Functions.Multiply(-2, -2);
+            result.Should().Be(4);
+        }
+
+        [Test]
         public void MultiplyShouldRunInSimilarTimesForDramaticallyDifferentOperands()
         {
             var sw = new Stopwatch();
