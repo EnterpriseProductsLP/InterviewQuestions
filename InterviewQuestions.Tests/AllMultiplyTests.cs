@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace InterviewQuestions.Tests
 {
     [TestFixture]
-    public class AllMultiplyTests
+    public class MultiplyTests
     {
         [Test]
         public void MultiplyReturnsZeroWhenFirstOperandIsZero()
