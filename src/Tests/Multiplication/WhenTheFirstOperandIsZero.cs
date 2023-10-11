@@ -3,7 +3,7 @@ using Answers;
 namespace Tests.Multiplication;
 
 [TestFixture]
-public class WhenTheFirstParameterIsZero : IntFunctionTest
+public class WhenTheFirstOperandIsZero : IntFunctionTest
 {
     protected override int ExpectedResult => 0;
 
