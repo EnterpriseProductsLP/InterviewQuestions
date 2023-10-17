@@ -9,6 +9,8 @@ public class WhenTheFirstOperandIsZero : IntFunctionTest
 
     protected override int GetResult()
     {
-        return 0.Times(10);
+        const int x = 0;
+        const int y = 10;
+        return x.Times(y);
     }
 }

@@ -9,6 +9,8 @@ public class WhenBothOperandsAreNegative : IntFunctionTest
 
     protected override int GetResult()
     {
-        return -10.Times(-10);
+        const int x = -10;
+        const int y = -10;
+        return x.Times(y);
     }
 }
