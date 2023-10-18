@@ -1,6 +1,6 @@
 ﻿namespace Answers;
 
-public static class MathExtensions
+public static class MultiplicationExtensions
 {
     /// <summary>Multiplies two integers.</summary>
     /// <param name="x">The first operand.</param>
