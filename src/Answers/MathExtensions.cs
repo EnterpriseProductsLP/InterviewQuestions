@@ -13,6 +13,35 @@ public static class MathExtensions
     /// </remarks>
     public static int Times(this int x, int y)
     {
-        throw new NotImplementedException("This method to be implemented by the candidate.");
+        if (EitherOperandIsZero(x, y))
+        {
+            return 0;
+        }
+
+        var absX = Math.Abs(x);
+        var absY = Math.Abs(y);
+
+        if (absX > absY)
+        {
+            (absX, absY) = (absY, absX);
+        }
+
+        var result = 0;
+        for (var i = 0; i < absX; i++)
+        {
+            result += absY;
+        }
+
+        return ResultShouldBeNegative(x, y) ? -result : result;
+    }
+
+    private static bool EitherOperandIsZero(int x, int y)
+    {
+        return x == 0 || y == 0;
+    }
+
+    private static bool ResultShouldBeNegative(int x, int y)
+    {
+        return (x > 0 && y < 0) || (x < 0 && y > 0);
     }
 }
