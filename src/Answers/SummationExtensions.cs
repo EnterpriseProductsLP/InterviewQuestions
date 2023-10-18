@@ -9,6 +9,12 @@ public static class SummationExtensions
     /// <returns>The sum of the given values.</returns>
     public static int Sum(this int[] values)
     {
-        throw new NotImplementedException("This method to be implemented by the candidate.");
+        var result = 0;
+        for (var i = 0; i < values.Length; i++)
+        {
+            result += values[i];
+        }
+
+        return result;
     }
 }
