@@ -1,6 +1,6 @@
 ﻿namespace Answers;
 
-public static class MathExtensions
+public static class MultiplicationExtensions
 {
     /// <summary>Multiplies two integers.</summary>
     /// <param name="x">The first operand.</param>
@@ -21,10 +21,7 @@ public static class MathExtensions
         var absX = Math.Abs(x);
         var absY = Math.Abs(y);
 
-        if (absX > absY)
-        {
-            (absX, absY) = (absY, absX);
-        }
+        OptimizeInputs(ref absX, ref absY);
 
         var result = 0;
         for (var i = 0; i < absX; i++)
@@ -38,6 +35,15 @@ public static class MathExtensions
     private static bool EitherOperandIsZero(int x, int y)
     {
         return x == 0 || y == 0;
+    }
+
+    private static void OptimizeInputs(ref int absX, ref int absY)
+    {
+        if (absX > absY)
+        {
+            (absX, absY) = (absY, absX);
+        }
+
     }
 
     private static bool ResultShouldBeNegative(int x, int y)
